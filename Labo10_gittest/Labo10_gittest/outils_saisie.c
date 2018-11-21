@@ -104,7 +104,8 @@ int saisirEntierBorne(char const *invite, int borne_inf, int borne_sup)
 		printf("%s", invite);
 		saisieOk = scanf("%d", &Entier_saisit);
 		viderBuffer();
-		if ((saisieOk != 1) || (Entier_saisit < borne_inf) || (Entier_saisit > borne_sup))
+		if ((saisieOk != 1) || (Entier_saisit < borne_inf) ||
+			(Entier_saisit > borne_sup))
 		{
 			printf("La valeur saisie n'est pas valide.\n");
 		}
@@ -139,7 +140,8 @@ double saisirReel(char const *invite)
 	return entree;
 }
 
-double saisirReelBorne(char const *invite, double borne_inf, double borne_sup)
+double saisirReelBorne(char const *invite, 
+	double borne_inf, double borne_sup)
 {
 	int saisieDone = 0;
 	int saisieOk;
@@ -149,7 +151,8 @@ double saisirReelBorne(char const *invite, double borne_inf, double borne_sup)
 		printf("%s", invite);
 		saisieOk = scanf("%lf", &entree);
 		viderBuffer();
-		if ((saisieOk != 1) || (entree < borne_inf) || (entree > borne_sup))
+		if ((saisieOk != 1) || (entree < borne_inf)
+			|| (entree > borne_sup))
 		{
 			printf("La valeur saisie n'est pas valide.\n");
 		}
@@ -169,8 +172,9 @@ void saisirString(char const *invite, int maxTaille, char *string)
 	do
 	{
 		printf("%s ", invite);
-		saisieOk = scanf("%[^\n]", string); /* Pas besoin de mettre un & car string
-		est déjà un pointeur*/
+		saisieOk = scanf("%[^\n]", string);
+		/* Pas besoin de mettre un & car 
+		string est déjà un pointeur*/
 		viderBuffer();
 		//	strlen retourne la longueur du string
 		if ((saisieOk != 1) || (strlen(string) > maxTaille))	
