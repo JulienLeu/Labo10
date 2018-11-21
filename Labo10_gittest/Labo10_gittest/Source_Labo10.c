@@ -21,7 +21,7 @@
 #define TAILLE_MAX_CM	250
 #define TAILLE_MIN_M		0.4
 #define TAILLE_MAX_M		2.5
-/*coucou julien*/
+
 int main(void)
 {
 	/* Variable du programme */
