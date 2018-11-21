@@ -2,14 +2,17 @@
  * Auteur  : Quentin Müller / Julien Leuenberger
  * Date    : 20.11.2018
  *
- * Description :	Fonctions qui facilite la saisie
+ * Description :	
+ *					Quelques autres fonctions très utiles
+ *						- vide le buffer du scanf
+ *						- confirmation de la sélection
+ *
+ *					Fonctions qui facilite la saisie
  *						- des nombres entier bornés ou non
  *						- des nombres réels bornés ou non
  *						- des chaines de caractères (string)
  *
- *					Quelques autres fonctions très utiles
- *						- vide le buffer du scanf
- *						- confirmation de la sélection
+ *					
  *
  * Remarque(s) : (Exemples: "Problèmes rencontés", Erreurs, etc.)
  *
