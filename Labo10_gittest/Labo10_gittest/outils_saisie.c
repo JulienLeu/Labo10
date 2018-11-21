@@ -164,7 +164,7 @@ void saisieString(char const *invite, int maxTaille, char *string)
 	do
 	{
 		printf("%s ", invite);
-		saisieOk = scanf("%s", string);
+		saisieOk = scanf("%[^\n]", string);
 		videBuffer();
 		if ((saisieOk != 1) || (strlen(string) > maxTaille))
 		{

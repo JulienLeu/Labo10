@@ -77,7 +77,7 @@ int main(void)
 			}
 			case 5:
 			{
-				saisieString("Texte a afficher ",50,tableau);
+				saisieString("Texte a afficher ",TAILLE_TABLEAU,tableau);
 				printf("%s", tableau);
 				break;
 			}
