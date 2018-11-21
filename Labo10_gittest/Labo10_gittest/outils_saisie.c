@@ -20,12 +20,12 @@
 #include <string.h>
 #include "outils_saisie.h"
 
-void videBuffer(void)
+void viderBuffer(void)
 {
 	while (getchar() != '\n');
 }
 
-int confirmation(char const *invite)
+int confirmer(char const *invite)
 {
 	int Conf,saisieDone = 0, saisieOk;
 	char Confirmation;
@@ -33,7 +33,7 @@ int confirmation(char const *invite)
 	{
 		printf("%s", invite);
 		saisieOk = scanf("%c", &Confirmation);
-		videBuffer();
+		viderBuffer();
 		if (saisieOk == 1)
 		{
 			switch (Confirmation)
@@ -69,14 +69,14 @@ int confirmation(char const *invite)
 	return Conf;
 }
 
-int saisieEntier(char const *invite)
+int saisirEntier(char const *invite)
 {
 	int Entier_saisit,saisieDone = 0,saisieOk;
 	do
 	{
 		printf("%s", invite);
 		saisieOk = scanf("%d", &Entier_saisit);
-		videBuffer();
+		viderBuffer();
 		if (saisieOk != 1)
 		{
 			printf("La valeur saisie n'est pas valide.\n");
@@ -90,7 +90,7 @@ int saisieEntier(char const *invite)
 	return Entier_saisit;
 }
 
-int saisieEntierBorne(char const *invite, int borne_inf, int borne_sup)
+int saisirEntierBorne(char const *invite, int borne_inf, int borne_sup)
 {
 	int Entier_saisit, saisieDone = 0, saisieOk;
 
@@ -98,7 +98,7 @@ int saisieEntierBorne(char const *invite, int borne_inf, int borne_sup)
 	{
 		printf("%s", invite);
 		saisieOk = scanf("%d", &Entier_saisit);
-		videBuffer();
+		viderBuffer();
 		if ((saisieOk != 1) || (Entier_saisit < borne_inf) || (Entier_saisit > borne_sup))
 		{
 			printf("La valeur saisie n'est pas valide.\n");
@@ -112,7 +112,7 @@ int saisieEntierBorne(char const *invite, int borne_inf, int borne_sup)
 	return Entier_saisit;
 }
 
-double saisieReel(char const *invite)
+double saisirReel(char const *invite)
 {
 	int saisieDone = 0;
 	int saisieOk;
@@ -121,7 +121,7 @@ double saisieReel(char const *invite)
 	{
 		printf("%s", invite);
 		saisieOk = scanf("%lf", &entree);
-		videBuffer();
+		viderBuffer();
 		if (saisieOk != 1)
 		{
 			printf("La valeur saisie n'est pas valide.\n");
@@ -134,7 +134,7 @@ double saisieReel(char const *invite)
 	return entree;
 }
 
-double saisieReelBorne(char const *invite, double borne_inf, double borne_sup)
+double saisirReelBorne(char const *invite, double borne_inf, double borne_sup)
 {
 	int saisieDone = 0;
 	int saisieOk;
@@ -143,7 +143,7 @@ double saisieReelBorne(char const *invite, double borne_inf, double borne_sup)
 	{
 		printf("%s", invite);
 		saisieOk = scanf("%lf", &entree);
-		videBuffer();
+		viderBuffer();
 		if ((saisieOk != 1) || (entree < borne_inf) || (entree > borne_sup))
 		{
 			printf("La valeur saisie n'est pas valide.\n");
@@ -156,7 +156,7 @@ double saisieReelBorne(char const *invite, double borne_inf, double borne_sup)
 	return entree;
 }
 
-void saisieString(char const *invite, int maxTaille, char *string)
+void saisirString(char const *invite, int maxTaille, char *string)
 {
 	int saisieDone = 0;
 	int saisieOk;
@@ -165,7 +165,7 @@ void saisieString(char const *invite, int maxTaille, char *string)
 	{
 		printf("%s ", invite);
 		saisieOk = scanf("%[^\n]", string);
-		videBuffer();
+		viderBuffer();
 		if ((saisieOk != 1) || (strlen(string) > maxTaille))
 		{
 			printf("La valeur saisie n'est pas valide.\n");

@@ -8,46 +8,50 @@
 * Remarque(s) :
 *
 * Modifications : Date / Auteur / Raison
-*		  26.04.2017/DMT : Pour Visual Studio 2017
+*		  20.11.2018/DMT : Modification des prototypes et des commentaires
 * Compilateur : Visual Studio 2017
 */
 
 #ifndef __OUTIL_SAISIE_H_
 #define __OUTIL_SAISIE_H_
 
-//---------------------------------------------------------------------
-// Vide le ligne courante du tampon d'entree
-void videBuffer(void);
+#define EOL '\n'
+//-----------------------------------------------------------------------------
+// Cette fonction vide le tampon (buffer) d'entrée (stdin) du clavier
+void viderBuffer(void);
 
-//---------------------------------------------------------------------
-// Affiche un message et confirme (oui/non) le chois de l'utilisateur
-int confirmation(char const *invite);
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message (question) reçu en paramètre (consigne) et 
+// attend la réponse (o/n) de l'utilisateur (ex.: "Voulez-vous continuer [o/n] :" ).
+// Les caractères 'o' et 'O' retourneront 1, tandis que les caractères 'n' et 'N' 0
+int confirmer(char const *consigne);
 
-//---------------------------------------------------------------------
-// Lecture sans erreur d'un entier signe avec demande préalable
-// Le reste de la ligne est vide
-int saisieEntier(char const *invite);
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message reçu en paramètre (consigne) et retourne un entier 
+// signé repondant à la consigne (ex.: "Entrer votre taille en cm : ")
+int saisirEntier(char const *consigne);
 
-//---------------------------------------------------------------------
-// Lecture sans erreur d'un entier signe entre 2 bornes;
-//     avec demande préalable
-// Le reste de la ligne est vide
-int saisieEntierBorne(char const *invite, int borne_inf, int borne_sup);
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message reçu en paramètre (consigne) et retourne un entier 
+// signé repondant à la consigne et se trouvant dans les limites (bornes) reçues
+// (ex.: "Entrer votre taille en cm [40 - 250] :")
+int saisirEntierBorne(char const *consigne, int borne_inf, int borne_sup);
 
-//---------------------------------------------------------------------
-// Lecture sans erreur d'un reel (simple ou double) avec demande préalable
-// Le reste de la ligne est vide
-double saisieReel(char const *invite);
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message reçu en paramètre (consigne) et retourne un double 
+// repondant à la consigne (ex.: "Entrer votre taille en m : ")
+double saisirReel(char const *consigne);
 
-//---------------------------------------------------------------------
-// Lecture sans erreur d'un reel (simple ou double) entre 2 bornes;
-//     avec demande préalable
-// Le reste de la ligne est vide
-double saisieReelBorne(char const *invite, double borne_inf, double borne_sup);
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message reçu en paramètre (consigne) et retourne un double 
+// repondant à la consigne et se trouvant dans les limites (bornes) reçues
+// (ex.: "Entrer votre taille en m [0.4 - 2.5] :")
+double saisirReelBorne(char const *consigne, double borne_inf, double borne_sup);
 
-//---------------------------------------------------------------------
-// Lecture sans erreur d'une chaîne de caractères (phrase) de taille max 
-//     avec demande préalable
-void saisieString(char const *invite, int maxTaille, char *string);
-
+//-----------------------------------------------------------------------------
+// Cette fonction affiche le message reçu en paramètre (consigne) et retourne dans la
+// variable "string", la chaîne de caractères entrée par l'utilisateur
+// (ex.: "Entrer votre prenom suivi de votre nom : ")
+void saisirString(char const *consigne, int maxTaille, char *string);
 #endif
+

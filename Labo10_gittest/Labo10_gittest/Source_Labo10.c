@@ -37,13 +37,13 @@ int main(void)
 		printf("\n5 - Saisie string");
 		printf("\n0 - Quitter - Confirmation\n");
 
-		choix_menu = saisieEntier("Choix -> ");
+		choix_menu = saisirEntier("Choix -> ");
 
 		switch (choix_menu)
 		{
 			case 0: // Quitter le programme
 			{
-				if (confirmation("Voulez vous vraiment quitter <O/N> "))
+				if (confirmer("Voulez vous vraiment quitter <O/N> "))
 				{
 					printf("Vous avez choisit de quitter l'application\n");
 				}
@@ -56,28 +56,28 @@ int main(void)
 			}
 			case 1:
 			{
-				printf("Valeur entree %d\n", saisieEntier("Hauteur "));
+				printf("Valeur entree %d\n", saisirEntier("Hauteur "));
 				break;
 			}
 			case 2:
 			{
-				printf("Valeur entree %d\n", saisieEntierBorne("Hauteur entre 2 et 20 ",2,20));
+				printf("Valeur entree %d\n", saisirEntierBorne("Hauteur entre 2 et 20 ",2,20));
 				break;
 			}
 			case 3:
 			{
-				printf("Valeur entree %lf\n", saisieReel("Longueur livre "));
+				printf("Valeur entree %lf\n", saisirReel("Longueur livre "));
 				break;
 			}
 			case 4:
 			{
 				printf("Valeur entree %lf\n", 
-					saisieReelBorne("Longueur livre entre 1.0 et 50.0 ",1.0,50.0));
+					saisirReelBorne("Longueur livre entre 1.0 et 50.0 ",1.0,50.0));
 				break;
 			}
 			case 5:
 			{
-				saisieString("Texte a afficher ",TAILLE_TABLEAU,tableau);
+				saisirString("Texte a afficher ",TAILLE_TABLEAU,tableau);
 				printf("%s", tableau);
 				break;
 			}
