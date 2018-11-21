@@ -28,7 +28,7 @@ int main(void)
 	int choix_menu;
 	char tableau[TAILLE_TABLEAU];
 
-	printf("\n\nProgramme permettant de tester la librairie outils_saisie");
+	printf("\n\nProgramme permettant de tester la librairie outils_saisie.c");
 
 	do
 	{
@@ -46,50 +46,50 @@ int main(void)
 		switch (choix_menu)
 		{
 			case 0: // Quitter le programme
-			{
-				if (confirmer("Voulez vous vraiment quitter <O/N> "))
+			{	// Test fonction confirmer
+				if (confirmer("Voulez vous vraiment quitter <O/N> : "))
 				{
 					printf("Vous avez choisit de quitter l'application\n");
 				}
 				else
 				{
-					choix_menu = 6;
+					choix_menu = 6;	// choix_menu doit être différent de 0 au choix
 					printf("Alors on continue");
 				}
 				break;
 			}
-			case 1:
+			case 1: // Test de la fonction saisir entier
 			{
-				printf("Votre taille: %d cm\n", saisirEntier("Entrer votre taille en cm : "));
+				printf("Votre taille : %d cm\n", saisirEntier("Entrer votre taille en cm : "));
 				break;
 			}
-			case 2:
+			case 2: // Test de la fonction saisir entier borné
 			{
-				printf("Votre taille: %d cm\n", saisirEntierBorne("Entrer votre taille en cm [40 -250] : "
+				printf("Votre taille : %d cm\n", saisirEntierBorne("Entrer votre taille en cm [40 -250] : "
 					,TAILLE_MIN_CM,TAILLE_MAX_CM));
 				break;
 			}
-			case 3:
+			case 3: // Test de la fonction saisir réel
 			{
-				printf("Votre taille: %lf m\n", saisirReel("Entrer votre taille en m : "));
+				printf("Votre taille : %4.2lf m\n", saisirReel("Entrer votre taille en m : "));
 				break;
 			}
-			case 4:
+			case 4: // Test de la fonction saisir réel borné
 			{
-				printf("Votre taille: %lf m\n", 
+				printf("Votre taille : %4.2lf m\n", 
 					saisirReelBorne("Entrer votre taille en m [0.4 - 2.5] : "
 						,TAILLE_MIN_M,TAILLE_MAX_M));
 				break;
 			}
-			case 5:
+			case 5: // Test de la fonction saisir string
 			{
-				saisirString("Texte a afficher ",TAILLE_TABLEAU,tableau);
-				printf("%s", tableau);
+				saisirString("Entrez votre prenom suivit de votre nom : ",TAILLE_TABLEAU,tableau);
+				printf("Vous vous appelez %s", tableau);
 				break;
 			}
 			default: // Valeur correspondant à aucun menu
 			{
-				printf("\nLa valeur saisie n'est pas valide.");
+				printf("\nLa valeur saisie n'est pas valide.\n");
 				break;
 			}
 		}
