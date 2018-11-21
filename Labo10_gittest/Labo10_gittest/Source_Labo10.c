@@ -25,8 +25,6 @@ int main(void)
 	char tableau[TAILLE_TABLEAU];
 
 	printf("\n\nProgramme permettant de tester la librairie outils_saisie");
-	printf("Essai de modif\n");
-	printf("Essai 2");
 
 	do
 	{
