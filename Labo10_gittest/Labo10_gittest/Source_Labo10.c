@@ -64,7 +64,7 @@ int main(void)
 			case 1: // Test de la fonction saisir entier
 			{
 				printf("Votre taille : %d cm\n", saisirEntier("Entrer" 
-					"votre taille en cm : "));
+					" votre taille en cm : "));
 				break;
 			}
 			case 2: // Test de la fonction saisir entier borné

@@ -77,20 +77,28 @@ int confirmer(char const *invite)
 int saisirEntier(char const *invite)
 {
 	int Entier_saisit,saisieDone = 0,saisieOk;
+	double val;
 	do
 	{
 		printf("%s", invite);
-		saisieOk = scanf("%d", &Entier_saisit);
+		saisieOk = scanf("%lf", &val);
 		viderBuffer();
-		if (saisieOk != 1)
+		Entier_saisit = val;
+		if (Entier_saisit != 0)
 		{
-			printf("La valeur saisie n'est pas valide.\n");
+			if (((saisieOk != 1) || ((Entier_saisit / val) != 1)))
+			{
+				printf("La valeur saisie n'est pas valide.\n");
+			}
+			else
+			{
+				saisieDone = 1;
+			}
 		}
 		else
 		{
 			saisieDone = 1;
 		}
-
 	} while (!saisieDone);
 	return Entier_saisit;
 }
