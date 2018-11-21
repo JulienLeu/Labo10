@@ -3,7 +3,7 @@
  * Date    : 20.11.2018
  *
  * Description :	
- *					Quelques autres fonctions très utiles
+ *					Quelques fonctions très utiles
  *						- vide le buffer du scanf
  *						- confirmation de la sélection
  *
