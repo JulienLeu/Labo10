@@ -17,6 +17,10 @@
 
 /* Constantes et Variables globales */
 #define TAILLE_TABLEAU 100
+#define TAILLE_MIN_CM 40
+#define TAILLE_MAX_CM 250
+#define TAILLE_MIN_M 0.4
+#define TAILLE_MAX_M 2.5
 
 int main(void)
 {
@@ -56,23 +60,25 @@ int main(void)
 			}
 			case 1:
 			{
-				printf("Valeur entree %d\n", saisirEntier("Hauteur "));
+				printf("Votre taille: %d cm\n", saisirEntier("Entrer votre taille en cm : "));
 				break;
 			}
 			case 2:
 			{
-				printf("Valeur entree %d\n", saisirEntierBorne("Hauteur entre 2 et 20 ",2,20));
+				printf("Votre taille: %d cm\n", saisirEntierBorne("Entrer votre taille en cm [40 -250] : "
+					,TAILLE_MIN_CM,TAILLE_MAX_CM));
 				break;
 			}
 			case 3:
 			{
-				printf("Valeur entree %lf\n", saisirReel("Longueur livre "));
+				printf("Votre taille: %lf m\n", saisirReel("Entrer votre taille en m : "));
 				break;
 			}
 			case 4:
 			{
-				printf("Valeur entree %lf\n", 
-					saisirReelBorne("Longueur livre entre 1.0 et 50.0 ",1.0,50.0));
+				printf("Votre taille: %lf m\n", 
+					saisirReelBorne("Entrer votre taille en m [0.4 - 2.5] : "
+						,TAILLE_MIN_M,TAILLE_MAX_M));
 				break;
 			}
 			case 5:
