@@ -50,7 +50,8 @@ int main(void)
 			{	// Test fonction confirmer
 				if (confirmer("Voulez vous vraiment quitter <O/N> : "))
 				{
-					printf("Vous avez choisit de quitter l'application\n");
+					printf("Vous avez choisit de quitter"
+						" l'application\n");
 				}
 				else
 				{
