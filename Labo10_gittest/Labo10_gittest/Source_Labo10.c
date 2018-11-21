@@ -19,8 +19,8 @@
 #define TAILLE_TABLEAU	100
 #define TAILLE_MIN_CM	40
 #define TAILLE_MAX_CM	250
-#define TAILLE_MIN_M	0.4
-#define TAILLE_MAX_M	2.5
+#define TAILLE_MIN_M		0.4
+#define TAILLE_MAX_M		2.5
 
 int main(void)
 {
