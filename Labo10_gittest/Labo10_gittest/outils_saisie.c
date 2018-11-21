@@ -2,12 +2,14 @@
  * Auteur  : Quentin Müller / Julien Leuenberger
  * Date    : 20.11.2018
  *
- * Description : Librairie qui facilite
- *						- vide le buffer du scanf
- *						- confirmation de la sélection
+ * Description :	Fonctions qui facilite la saisie
  *						- des nombres entier bornés ou non
  *						- des nombres réels bornés ou non
  *						- des chaines de caractères (string)
+ *
+ *					Quelques autres fonctions très utiles
+ *						- vide le buffer du scanf
+ *						- confirmation de la sélection
  *
  * Remarque(s) : (Exemples: "Problèmes rencontés", Erreurs, etc.)
  *
@@ -56,7 +58,7 @@ int confirmer(char const *invite)
 				}
 				default :
 				{
-					printf("Commande pas reconnue");
+					printf("Commande non reconnue");
 					break;
 				}
 			}
@@ -164,9 +166,11 @@ void saisirString(char const *invite, int maxTaille, char *string)
 	do
 	{
 		printf("%s ", invite);
-		saisieOk = scanf("%[^\n]", string);
+		saisieOk = scanf("%[^\n]", string); /* Pas besoin de mettre un & car string
+		est déjà un pointeur*/
 		viderBuffer();
-		if ((saisieOk != 1) || (strlen(string) > maxTaille))
+		//	strlen retourne la longueur du string
+		if ((saisieOk != 1) || (strlen(string) > maxTaille))	
 		{
 			printf("La valeur saisie n'est pas valide.\n");
 		}
