@@ -26,6 +26,7 @@ int main(void)
 
 	printf("\n\nProgramme permettant de tester la librairie outils_saisie");
 	printf("Essai de modif\n");
+	printf("Essai 2");
 
 	do
 	{
