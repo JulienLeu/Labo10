@@ -168,16 +168,14 @@ void saisirString(char const *invite, int maxTaille, char *string)
 {
 	int saisieDone = 0;
 	int saisieOk;
+	
 
 	do
 	{
 		printf("%s ", invite);
-		saisieOk = scanf("%[^\n]", string);
 		/* Pas besoin de mettre un & car 
 		string est déjà un pointeur*/
-		viderBuffer();
-		//	strlen retourne la longueur du string
-		if ((saisieOk != 1) || (strlen(string) > maxTaille))	
+		if (fgets(string, maxTaille, stdin)== NULL)
 		{
 			printf("La valeur saisie n'est pas valide.\n");
 		}
@@ -185,5 +183,8 @@ void saisirString(char const *invite, int maxTaille, char *string)
 		{
 			saisieDone = 1;
 		}
+
+		
 	} while (!saisieDone);
+
 }
